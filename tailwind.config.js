@@ -9,7 +9,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      textColor: {
+        'ethereum' : 'rgba(211, 210, 249, 1)'
+      }
+    },
   },
   plugins: [],
 }
