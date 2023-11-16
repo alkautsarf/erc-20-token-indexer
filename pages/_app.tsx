@@ -13,6 +13,8 @@ import {
   zora,
 } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
+import {Raleway} from 'next/font/google'
+const raleway = Raleway({ subsets: ['latin'], weight: '400' })
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
@@ -44,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
-        <Component {...pageProps} />
+        <Component {...pageProps}/>
       </RainbowKitProvider>
     </WagmiConfig>
   );
