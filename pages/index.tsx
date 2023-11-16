@@ -115,8 +115,8 @@ const Home: NextPage = () => {
                   response.map((el: TokenData) => <Tokens key={el?.contractAddress} tokenData={el} />)
                 ) : (
                   <Stack>
-                    {length.map((el) => (
-                      <Skeleton height="20px" width="full" />
+                    {length.map((el, idx) => (
+                      <Skeleton key={idx} height="20px" width="full" />
                     ))}
                   </Stack>
                 )}
