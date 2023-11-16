@@ -23,10 +23,11 @@ interface TokenData {
 }
 
 interface TokensProps {
+  key: any;
   tokenData: TokenData;
 }
 
-const Tokens: React.FC<TokensProps> = ({ tokenData }) => {
+const Tokens: React.FC<TokensProps> = ({ key, tokenData }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>

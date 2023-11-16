@@ -112,7 +112,7 @@ const Home: NextPage = () => {
             {mounted && (isConnected || addressFixed) && (
               <div className="sm:w-auto md:w-auto lg:w-auto xl:w-[40%] border border-black p-3 cursor-default">
                 {!isLoading ? (
-                  response.map((el: TokenData) => <Tokens tokenData={el} />)
+                  response.map((el: TokenData) => <Tokens key={el?.contractAddress} tokenData={el} />)
                 ) : (
                   <Stack>
                     {length.map((el) => (
